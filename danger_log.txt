@@ -3,7 +3,7 @@ Danger Log:
 
 2/27: 
 
-●	While establishing a socket connection with a client or the server, there are a number of places where errors could occur such as during socket creation and accepting socket connection requests, we catch these errors in each step of the connection building process to guarantee strong exception safety. 
+●	While establishing a socket connection with a client or the server, there are a number of zplaces where errors could occur such as during socket creation and accepting socket connection requests, we catch these errors in each step of the connection building process to guarantee strong exception safety. 
 
 ●	We checked if the boost::beast library is able to identify errors related to malformed requests and responses. Attackers could send malformed headers that can cause information leak, buffer overflow, and unwanted code processing. Our library works as expected and is able to reject malformed requests and corrupted and send appropriate error messages to the client. 
 
